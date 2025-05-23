@@ -2,6 +2,10 @@ require("dotenv").config();
 const express = require("express");
 const db = require("./db");
 const app = express();
+const  initDatabase = request("./init-db"); // importar modulo-db.js
+
+//iniciar BBDD
+initDatabase();
 
 // Middleware para procesar JSON
 app.use(express.json());
